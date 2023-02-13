@@ -1,0 +1,51 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+	"name": "Ubuntu",
+
+	"runArgs": [
+		"--volume=/dev:/dev",
+		"--volume=/lib/modules:/lib/modules",
+		// -
+		// https://refspecs.linuxfoundation.org/FHS_3.0/fhs/ch03s02.html
+		"--volume=/:/host",
+		"--volume=/proc:/host/proc",
+		"--volume=/sys:/host/sys",
+		// bin	Essential command binaries
+		"--volume=/bin:/host/bin",
+		// boot	Static files of the boot loader
+		"--volume=/boot:/host/boot",
+		// dev	Device files
+		"--volume=/dev:/host/dev",
+		// etc	Host-specific system configuration
+		"--volume=/etc:/host/etc",
+		// lib	Essential shared libraries and kernel modules
+		"--volume=/lib:/host/lib",
+		"--volume=/lib32:/host/lib32",
+		"--volume=/lib64:/host/lib64",
+		// media	Mount point for removable media
+		"--volume=/media:/host/media",
+		// mnt	Mount point for mounting a filesystem temporarily
+		"--volume=/mnt:/host/mnt",
+		// opt	Add-on application software packages
+		"--volume=/opt:/host/opt",
+		// run	Data relevant to running processes
+		"--volume=/run:/host/run",
+		// sbin	Essential system binaries
+		"--volume=/sbin:/host/sbin",
+		// srv	Data for services provided by this system
+		"--volume=/srv:/host/srv",
+		// tmp	Temporary files
+		"--volume=/tmp:/host/tmp",
+		// usr	Secondary hierarchy
+		"--volume=/usr:/host/usr",
+		// var	Variable dat
+		"--volume=/var:/host/var",
+		// -
+		"--privileged",
+		"--cap-add=ALL"
+	],
+	"extensions": [
+		"mutantdino.resourcemonitor"
+	],
+	"remoteUser": "root"
+}
