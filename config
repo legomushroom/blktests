@@ -1,0 +1,2 @@
+TEST_DEVS=(/dev/loop0 /dev/nbd1)
+
