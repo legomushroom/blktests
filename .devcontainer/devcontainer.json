@@ -2,6 +2,8 @@
 {
 	"name": "Ubuntu",
 
+	"postCreateCommand": "apt update && apt install -y fio",
+
 	"runArgs": [
 		"--volume=/dev:/dev",
 		"--volume=/lib/modules:/lib/modules",
